@@ -1,0 +1,8 @@
+import { h } from './dom.js';
+export function heading(label, title, description) { return h('div', { class: 'tool-heading' }, h('div', { class: 'eyebrow' }, label), h('h1', {}, title), h('p', {}, description)); }
+export function notice(text) { return h('div', { class: 'notice', role: 'status' }, text); }
+export function labelled(label, input) { return h('label', { class: 'field-label' }, h('span', {}, label), input); }
+export function download(name, text, type = 'application/json') { const url = URL.createObjectURL(new Blob([text], { type })); const link = h('a', { href: url, download: name }); link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000); }
+export function showDialog(title, content) { const dialog = h('dialog', { class: 'detail-dialog' }, h('h2', {}, title), content, h('button', { class: 'button secondary', onClick: () => dialog.close() }, 'Close')); dialog.addEventListener('close', () => dialog.remove()); document.body.append(dialog); dialog.showModal(); }
+export function confirmAction(message) { return new Promise(resolve => { let settled = false; const finish = value => { if (settled)
+    return; settled = true; dialog.close(); dialog.remove(); resolve(value); }; const dialog = h('dialog', { class: 'detail-dialog confirm-dialog', 'aria-label': 'Confirm action' }, h('h2', {}, 'Before you continue'), h('p', {}, message), h('div', { class: 'dialog-actions' }, h('button', { class: 'button secondary', onClick: () => finish(false) }, 'Cancel'), h('button', { class: 'button primary', onClick: () => finish(true) }, 'Confirm'))); dialog.addEventListener('cancel', event => { event.preventDefault(); finish(false); }); document.body.append(dialog); dialog.showModal(); }); }

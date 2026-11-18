@@ -1,0 +1,89 @@
+{
+  "version": 2,
+  "items": [
+    {
+      "id": "sample-0",
+      "text": "arise from",
+      "kind": "collocation",
+      "pos": "",
+      "meaningVi": "xuất phát từ",
+      "meaningEn": "to happen as a result of something",
+      "forms": [
+        "arises from",
+        "arose from",
+        "arising from"
+      ],
+      "example": "Many social problems arise from a lack of opportunity.",
+      "distractors": [
+        "arise with",
+        "raise from",
+        "arrive of"
+      ],
+      "prompts": [
+        "Explain why traffic problems happen.",
+        "Discuss causes behind urban congestion."
+      ],
+      "scenarios": [],
+      "topic": "QA production",
+      "function": "cause",
+      "template": "",
+      "status": "ready",
+      "importId": "sample",
+      "createdAt": 0
+    },
+    {
+      "id": "sample-5",
+      "text": "lead to",
+      "kind": "collocation",
+      "pos": "",
+      "meaningVi": "dẫn đến",
+      "meaningEn": "to cause a result",
+      "forms": [
+        "leads to",
+        "led to",
+        "leading to"
+      ],
+      "example": "Air pollution can lead to serious health problems.",
+      "distractors": [
+        "lead for",
+        "leave to",
+        "lead by"
+      ],
+      "prompts": [
+        "Explain how pollution affects human health.",
+        "Discuss consequences caused by insufficient sleep."
+      ],
+      "scenarios": [],
+      "topic": "QA production",
+      "function": "effect",
+      "template": "",
+      "status": "ready",
+      "importId": "sample",
+      "createdAt": 0
+    }
+  ],
+  "progress": {
+    "sample-0": {
+      "itemId": "sample-0",
+      "level": 3,
+      "dueAt": 0,
+      "timerTier": 0,
+      "spontaneousSessionIds": [],
+      "history": []
+    },
+    "sample-5": {
+      "itemId": "sample-5",
+      "level": 4,
+      "dueAt": 0,
+      "timerTier": 0,
+      "spontaneousSessionIds": [],
+      "history": []
+    }
+  },
+  "writing": [],
+  "settings": {
+    "maxNew": 5,
+    "maxReview": 10
+  },
+  "requestCount": 0
+}

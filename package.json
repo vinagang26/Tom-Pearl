@@ -1,0 +1,33 @@
+{
+  "name": "tom-pearl",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "workspaces": [
+    "client",
+    "server",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "start": "node server/src/index.js",
+    "build": "node scripts/build.mjs",
+    "test": "vitest run client/tests server/tests",
+    "test:portable": "node --test tests/*.test.js",
+    "preview:build": "node scripts/standalone.cjs"
+  },
+  "dependencies": {
+    "zod": "^4.4.3",
+    "express": "^5.1.0",
+    "mammoth": "^1.9.1",
+    "pdf-parse": "1.1.1"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0",
+    "vitest": "^3.0.0",
+    "typescript": "^5.8.0"
+  }
+}
